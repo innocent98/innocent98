@@ -40,7 +40,7 @@ export default function MarketingSection() {
             <CardContent>
               <p className="text-muted-foreground">
                 Optimized site structure, meta tags, and schema markup to ensure search engines can effectively crawl
-                and index your portfolio.
+                and index your product.
               </p>
             </CardContent>
           </Card>
@@ -72,8 +72,7 @@ export default function MarketingSection() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Precision-targeted Google Ads campaigns focused on businesses seeking development services in your
-                specialty areas.
+                Precision-targeted Google Ads campaigns focused on your businesses.
               </p>
             </CardContent>
           </Card>
@@ -131,7 +130,7 @@ export default function MarketingSection() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Professional content strategy focused on showcasing your development expertise and connecting with
+                Professional content strategy focused on showcasing your business expertise and connecting with
                 potential clients.
               </p>
             </CardContent>
@@ -156,12 +155,12 @@ export default function MarketingSection() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Regular sharing of development insights, project updates, and industry news to build your professional
+                Regular sharing of business insights, business updates, and industry news to build your professional
                 network.
               </p>
             </CardContent>
           </Card>
-          <Card>
+          {/* <Card>
             <CardHeader className="flex flex-row items-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +184,7 @@ export default function MarketingSection() {
                 potential clients.
               </p>
             </CardContent>
-          </Card>
+          </Card> */}
         </motion.div>
       </TabsContent>
     </Tabs>
