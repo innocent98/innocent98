@@ -1,9 +1,12 @@
-import Link from "next/link"
-import { ArrowLeft, Calendar, ExternalLink, Github, Tag } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import SiteHeader from "@/components/site-header"
-import SiteFooter from "@/components/site-footer"
+"use client";
+
+import Link from "next/link";
+import { ArrowLeft, Calendar, ExternalLink, Github, Tag } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import { useParams } from "next/navigation";
 
 // Project data (same as in projects/page.tsx)
 const projects = [
@@ -16,7 +19,8 @@ const projects = [
       "FikeFit is a feature-rich fitness and wellness app designed to help users stay active, track progress, and achieve their health goals. It offers Apple Pay integration for subscriptions, offline access, downloadable content, social features, and a built-in media player for guided workouts. Built with React Native, FikeFit delivers a seamless and engaging experience, making fitness more accessible and personalized.",
     tags: ["React Native", "Firebase", "Redux", "Stripe", "Pix", "Boleto"],
     image: "/fikefit.png?height=600&width=800",
-    demoUrl: "https://play.google.com/store/apps/details?id=com.fikefit.FikeFit",
+    demoUrl:
+      "https://play.google.com/store/apps/details?id=com.fikefit.FikeFit",
     githubUrl: "https://github.com/",
     category: "mobile",
     featured: true,
@@ -68,7 +72,7 @@ const projects = [
       "Real-time tracking & documentation.",
       "Manage care anytime, anywhere",
       "Push notifications for reminders",
-      "OaklyCare: Quality Care, When You Need It."
+      "OaklyCare: Quality Care, When You Need It.",
     ],
     challenges:
       "Integrating with various health devices and ensuring data accuracy was a significant challenge. We are developing a unified API layer that could normalize data from different sources while maintaining accuracy and reliability.",
@@ -181,10 +185,18 @@ const projects = [
   {
     id: "aegiscribe",
     title: "Aegiscribe",
-    description: "Aegiscribe is a digital library platform designed to revolutionize secure book publishing and digital product sales.",
+    description:
+      "Aegiscribe is a digital library platform designed to revolutionize secure book publishing and digital product sales.",
     longDescription:
       "Aegiscribe is a digital library platform designed to revolutionize secure book publishing and digital product sales. Focused on providing a seamless reading and publishing experience, it allows authors and publishers to protect their work with advanced Digital Rights Management (DRM) technology while offering personalized recommendations to readers. The platform is accessible across devices, ensuring an optimized reading experience and easy management of content. Aegiscribe serves as a bridge between digital content creators and readers, promoting a secure, interactive, and engaging environment for both parties.",
-    tags: ["Next.js", "React Native", "Django", "PostgreSQL", "Redux", "Chart.js"],
+    tags: [
+      "Next.js",
+      "React Native",
+      "Django",
+      "PostgreSQL",
+      "Redux",
+      "Chart.js",
+    ],
     image: "/aegis.png?height=600&width=800",
     demoUrl: "#",
     githubUrl: "https://github.com/",
@@ -277,10 +289,12 @@ const projects = [
   //     "/placeholder.svg?height=400&width=600",
   //   ],
   // },
-]
+];
 
-export default function ProjectDetailPage({ params }: { params: { id: string } }) {
-  const project = projects.find((p) => p.id === params.id)
+export default function ProjectDetailPage() {
+  const params = useParams();
+
+  const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
     return (
@@ -295,7 +309,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         </main>
         <SiteFooter />
       </div>
-    )
+    );
   }
 
   return (
@@ -324,7 +338,9 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
 
               <div className="mt-8">
                 <h1 className="text-3xl font-bold">{project.title}</h1>
-                <p className="mt-4 text-muted-foreground">{project.longDescription}</p>
+                <p className="mt-4 text-muted-foreground">
+                  {project.longDescription}
+                </p>
 
                 <div className="mt-8">
                   <h2 className="text-xl font-semibold mb-4">Key Features</h2>
@@ -354,7 +370,9 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                 </div>
 
                 <div className="mt-8">
-                  <h2 className="text-xl font-semibold mb-4">Challenges & Solutions</h2>
+                  <h2 className="text-xl font-semibold mb-4">
+                    Challenges & Solutions
+                  </h2>
                   <p>{project.challenges}</p>
                 </div>
 
@@ -362,7 +380,10 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                   <h2 className="text-xl font-semibold mb-4">Screenshots</h2>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {project.screenshots.map((screenshot, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden border">
+                      <div
+                        key={index}
+                        className="rounded-lg overflow-hidden border"
+                      >
                         <img
                           src={screenshot || "/placeholder.svg"}
                           alt={`${project.title} screenshot ${index + 1}`}
@@ -383,10 +404,13 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                       <Calendar className="h-4 w-4" />
                       <span>
                         Completed:{" "}
-                        {new Date(project.completionDate).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                        })}
+                        {new Date(project.completionDate).toLocaleDateString(
+                          "en-US",
+                          {
+                            year: "numeric",
+                            month: "long",
+                          }
+                        )}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-muted-foreground">
@@ -426,7 +450,11 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                   <div className="flex flex-col gap-4">
                     {project.demoUrl && (
                       <Button asChild className="w-full">
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           View Live Demo
                         </a>
@@ -434,7 +462,11 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                     )}
                     {project.githubUrl && (
                       <Button asChild variant="outline" className="w-full">
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Github className="mr-2 h-4 w-4" />
                           View Source Code
                         </a>
@@ -443,7 +475,9 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                   </div>
 
                   <div className="pt-4 border-t">
-                    <h3 className="text-sm font-medium mb-2">Need a similar project?</h3>
+                    <h3 className="text-sm font-medium mb-2">
+                      Need a similar project?
+                    </h3>
                     <Button asChild className="w-full">
                       <Link href="/#contact">Contact Me</Link>
                     </Button>
@@ -456,6 +490,5 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
       </main>
       <SiteFooter />
     </div>
-  )
+  );
 }
-
