@@ -23,28 +23,28 @@ const projects = [
     category: "mobile",
     featured: true,
   },
-  {
-    id: "health",
-    title: "OaklyCare - Smarter, Reliable Aging Care",
-    description:
-      "OaklyCare is transforming home health in Nigeria with AI-driven care, on-demand services, and seamless automation for faster, personalized, and transparent care.",
-    longDescription:
-      "OaklyCare is redefining home health in Nigeria with AI-driven care, on-demand services, and automated workflows for fast, personalized, and transparent care. Book caregivers instantly, track services in real-time, and manage everything through our intuitive mobile app.",
-    tags: [
-      "Next.js",
-      "React Native",
-      "Firebase",
-      "Redux",
-      "HealthKit",
-      "Google Fit",
-      // "Machine Learning",
-    ],
-    image: "/oakly.png?height=600&width=800",
-    demoUrl: "https://www.oaklycare.com/",
-    githubUrl: "https://github.com/",
-    category: "web",
-    featured: true,
-  },
+  // {
+  //   id: "health",
+  //   title: "OaklyCare - Smarter, Reliable Aging Care",
+  //   description:
+  //     "OaklyCare is transforming home health in Nigeria with AI-driven care, on-demand services, and seamless automation for faster, personalized, and transparent care.",
+  //   longDescription:
+  //     "OaklyCare is redefining home health in Nigeria with AI-driven care, on-demand services, and automated workflows for fast, personalized, and transparent care. Book caregivers instantly, track services in real-time, and manage everything through our intuitive mobile app.",
+  //   tags: [
+  //     "Next.js",
+  //     "React Native",
+  //     "Firebase",
+  //     "Redux",
+  //     "HealthKit",
+  //     "Google Fit",
+  //     // "Machine Learning",
+  //   ],
+  //   image: "/oakly.png?height=600&width=800",
+  //   demoUrl: "https://www.oaklycare.com/",
+  //   githubUrl: "https://github.com/",
+  //   category: "web",
+  //   featured: true,
+  // },
   {
     id: "room",
     title: "ROOM - Smarter Form Creation & Data Management",

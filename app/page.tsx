@@ -18,13 +18,21 @@ const featuredProjects = [
     image: "/fikefit.png?height=300&width=500",
     link: "https://play.google.com/store/apps/details?id=com.fikefit.FikeFit",
   },
+  // {
+  //   title: "OaklyCare – Smarter, Reliable Aging Care",
+  //   description:
+  //     "OaklyCare is redefining home health in Nigeria with AI-driven care, on-demand services, and automated workflows for fast, personalized, and transparent care. Book caregivers instantly, track services in real-time, and manage everything through our intuitive mobile app.",
+  //   tags: ["Next.js", "PostgreSQL", "React Native", "Firebase", "Redux", "HealthKit"],
+  //   image: "/oakly.png?height=300&width=500",
+  //   link: "https://www.oaklycare.com/",
+  // },
   {
-    title: "OaklyCare – Smarter, Reliable Aging Care",
+    title: "EarnHub - Online Earn Platform ",
     description:
-      "OaklyCare is redefining home health in Nigeria with AI-driven care, on-demand services, and automated workflows for fast, personalized, and transparent care. Book caregivers instantly, track services in real-time, and manage everything through our intuitive mobile app.",
-    tags: ["Next.js", "PostgreSQL", "React Native", "Firebase", "Redux", "HealthKit"],
-    image: "/oakly.png?height=300&width=500",
-    link: "https://www.oaklycare.com/",
+      "The EarnHub is a dynamic web-based platform designed to allow users to earn income through various online activities. It enables individuals to earn money by completing tasks, taking surveys, engaging in affiliate marketing, and other interactive earning methods.",
+    tags: ["Next.js", "Firebase", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    image: "/earn.png?height=600&width=800",
+    link: "https://earn-online-now.vercel.app/",
   },
   {
     title: "ROOM – Smarter Form Creation & Data Management",
